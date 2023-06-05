@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+
+/* variables */
+:root {
+  /* ### primary colors */
+
+  --dark-blue: hsl(233, 26%, 24%);
+  --lime-green: hsl(136, 65%, 51%);
+  --bright-cyan: hsl(192, 70%, 51%);
+
+  /* ### Neutral */
+
+  --grayish-blue: hsl(233, 8%, 62%);
+  --hey: hsl(0, 0%, 80%);
+  --grayish-blue-light: hsl(220, 16%, 96%);
+  --gray-very-light: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+
+  /* gradient overlay for navbar overlay*/
+  /* --radial-gradient: radial-gradient(
+    ellipse at center bottom,
+    hsla(0, 3%, 69%, 0.7),
+    hsla(240, 2%, 10%, 0.7)
+  ); */
+
+  --radial-gradient: radial-gradient(
+    ellipse at center bottom,
+    hsla(233, 26%, 24%, 0.7),
+    hsl(233, 8%, 62%, 0.5)
+  );
+
+  /* font family */
+  --font-family: "Public Sans", sans-serif;
+  --font-weight-300: 300;
+  --font-weight-400: 400;
+  --font-weight-700: 700;
+
+  /* spacings */
+  --margin-30: 1.875rem;
+  --margin-40: 2.5rem;
+  --margin-50: 3.125rem;
+  --margin-60: 3.75rem;
+  --margin-90: 5.625rem;
+}
+
+/* globals */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* font-size: 1.125rem; */
+  background-color: var(--white);
+  font-family: var(--font-family);
+}
+
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* typography */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--dark-blue);
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+p,
+small {
+  color: var(--grayish-blue);
+}
+
+h1 {
+  font-size: 2.1875rem;
+  font-weight: var(--font-weight-400);
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: var(--font-weight-300);
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-400);
+}
+
+small {
+  display: block;
+}
