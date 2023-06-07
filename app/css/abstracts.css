@@ -16,8 +16,8 @@
   /* gradient for overlay */
   --radial-gradient: radial-gradient(
     ellipse at center bottom,
-    hsla(233, 26%, 24%, 0.7),
-    hsla(233, 3%, 45%, 0.6)
+    hsla(240, 5%, 20%, 0.8),
+    hsla(240, 1%, 35%, 0.8)
   );
   /* gradient for btn-primary */
   --linear-gradient: linear-gradient(
@@ -26,7 +26,8 @@
     var(--bright-cyan)
   );
 
-  --box-shadow: 0px 0px 8px rgba(124, 124, 124, 0.01),
+  /* box-shadow for blog- */
+  --box-shadow: 0px 0px 7px rgba(124, 124, 124, 0.01),
     0px 0px 12px rgba(170, 168, 170, 0.01);
 
   /* font family */
@@ -36,11 +37,13 @@
   --font-weight-700: 700;
 
   /* spacings */
+  --spacing-15: 0.9375rem;
   --spacing-20: 1.25rem;
   --spacing-25: 1.5625rem;
   --spacing-30: 1.875rem;
   --spacing-35: 2.1875rem;
   --spacing-40: 2.5rem;
+  --spacing-45: 2.8125rem;
   --spacing-50: 3.125rem;
   --spacing-60: 3.75rem;
   --spacing-70: 4.375rem;
@@ -95,6 +98,7 @@ h5 {
 
 p {
   text-align: center;
+  line-height: 1.5;
 }
 
 p,
@@ -118,8 +122,14 @@ h4 {
   font-weight: var(--font-weight-400);
 }
 
+h5 {
+  font-size: 16px;
+  font-weight: var(--font-weight-300);
+}
+
 small {
   display: block;
+  font-size: 0.6875rem;
 }
 
 /* buttons */
