@@ -2,32 +2,32 @@
 
 /* variables */
 :root {
-  /* ### primary colors */
-
+  /* ### colors */
   --dark-blue: hsl(233, 26%, 24%);
   --lime-green: hsl(136, 65%, 51%);
   --bright-cyan: hsl(192, 70%, 51%);
-
   /* ### Neutral */
-
   --grayish-blue: hsl(233, 8%, 62%);
   --hey: hsl(0, 0%, 80%);
   --grayish-blue-light: hsl(220, 16%, 96%);
   --gray-very-light: hsl(0, 0%, 98%);
   --white: hsl(0, 0%, 100%);
 
-  /* gradient overlay for navbar overlay*/
-  /* --radial-gradient: radial-gradient(
-    ellipse at center bottom,
-    hsla(0, 3%, 69%, 0.7),
-    hsla(240, 2%, 10%, 0.7)
-  ); */
-
+  /* gradient for overlay */
   --radial-gradient: radial-gradient(
     ellipse at center bottom,
     hsla(233, 26%, 24%, 0.7),
-    hsl(233, 8%, 62%, 0.5)
+    hsla(233, 3%, 45%, 0.6)
   );
+  /* gradient for btn-primary */
+  --linear-gradient: linear-gradient(
+    to right,
+    var(--lime-green),
+    var(--bright-cyan)
+  );
+
+  --box-shadow: 0px 0px 8px rgba(124, 124, 124, 0.01),
+    0px 0px 12px rgba(170, 168, 170, 0.01);
 
   /* font family */
   --font-family: "Public Sans", sans-serif;
@@ -36,11 +36,18 @@
   --font-weight-700: 700;
 
   /* spacings */
-  --margin-30: 1.875rem;
-  --margin-40: 2.5rem;
-  --margin-50: 3.125rem;
-  --margin-60: 3.75rem;
-  --margin-90: 5.625rem;
+  --spacing-20: 1.25rem;
+  --spacing-25: 1.5625rem;
+  --spacing-30: 1.875rem;
+  --spacing-35: 2.1875rem;
+  --spacing-40: 2.5rem;
+  --spacing-50: 3.125rem;
+  --spacing-60: 3.75rem;
+  --spacing-70: 4.375rem;
+  --spacing-90: 5.625rem;
+
+  /* sizings */
+  --fixed-mobile: 23.4375rem;
 }
 
 /* globals */
@@ -96,20 +103,41 @@ small {
 }
 
 h1 {
-  font-size: 2.1875rem;
-  font-weight: var(--font-weight-400);
-}
-
-h2 {
-  font-size: 1.75rem;
+  font-size: var(--spacing-40);
   font-weight: var(--font-weight-300);
 }
 
+h2 {
+  font-size: var(--spacing-30);
+  font-weight: var(--font-weight-300);
+  text-align: center;
+}
+
 h4 {
-  font-size: 1.25rem;
+  font-size: var(--spacing-20);
   font-weight: var(--font-weight-400);
 }
 
 small {
   display: block;
+}
+
+/* buttons */
+
+button {
+  background: var(--linear-gradient);
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 35px;
+  color: var(--white);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-700);
+  cursor: pointer;
+  transition: linear 120ms opacity;
+}
+
+/* put this into media query for desktop+ vpd */
+button:hover {
+  opacity: 0.92;
 }
