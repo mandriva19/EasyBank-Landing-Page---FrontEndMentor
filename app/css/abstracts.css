@@ -8,7 +8,7 @@
   --bright-cyan: hsl(192, 70%, 51%);
   /* ### Neutral */
   --grayish-blue: hsl(233, 8%, 62%);
-  --hey: hsl(0, 0%, 80%);
+  --grayish-blue-mid: hsl(0, 0%, 80%);
   --grayish-blue-light: hsl(220, 16%, 96%);
   --gray-very-light: hsl(0, 0%, 98%);
   --white: hsl(0, 0%, 100%);
@@ -54,6 +54,10 @@
   --fixed-mobile: 23.4375rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* globals */
 *,
 *::before,
@@ -74,6 +78,7 @@ body {
   padding-right: var(--spacing-24); */
   padding-left: 6.4%;
   padding-right: 6.4%;
+  max-width: 97.5rem;
 }
 
 /* @media (min-width: 62.5rem) {
