@@ -176,8 +176,8 @@ button:hover {
   opacity: 0.6;
 }
 
-/* style navbar desktop links hover effects ============ 
-    This hover-class is applied to links from min-width: 700px from JS.
+/* style for navbar-items links hover effects ============ 
+    This hover-class is applied to a-href links from @min-width: 700px >>> from JS.
 */
 .hover-class {
   position: relative;
@@ -205,7 +205,7 @@ button:hover {
   transition: ease all 300ms;
 }
 
-@media (min-width: 48.75rem) {
+@media (min-width: 52.5rem) {
   .hover-class::after {
     top: 47px;
   }

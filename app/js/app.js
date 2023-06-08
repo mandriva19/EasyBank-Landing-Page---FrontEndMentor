@@ -56,7 +56,7 @@ navbarClick.addEventListener("click", () => {
   navbarClickFunction();
 });
 
-//Media queries for 700px
+//@Media queries for 700px
 const mediaQueryMin700 = window.matchMedia("(min-width: 700px)");
 
 function runMediaQueryMin700(event) {
@@ -65,17 +65,17 @@ function runMediaQueryMin700(event) {
     navbarItems.classList.remove("is-hidden");
     navbarItems.classList.add("navbar-desktop");
     navbarOverlay.classList.add("is-hidden");
-    //Loop -navbar a- elements and give styles
+    //add hover classes to a elements
     navbarHrefs.forEach((navbarHref) => {
       navbarHref.classList.add("hover-class");
-      console.log(navbarHrefs);
+      //hover classes is styled in abstracts.css
     });
   } else {
     navbarItems.classList.add("navbar-mobile");
     navbarItems.classList.add("is-hidden");
     navbarItems.classList.remove("navbar-desktop");
     navbarClick.classList.remove("is-clicked");
-    //remove
+    //remove hover classes
     navbarHrefs.forEach((navbarHref) => {
       navbarHref.classList.remove("hover-class");
       console.log(navbarHrefs);
