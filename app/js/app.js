@@ -2,7 +2,9 @@
 const navbarClick = document.querySelector(".navbar-click");
 const navbarOverlay = document.querySelector(".navbar-overlay");
 const navbarItems = document.querySelector(".navbar-items");
+const navbarMobile = document.querySelector(".navbar-mobile");
 const body = document.querySelector("body");
+const navbarHrefs = navbarItems.querySelectorAll("a");
 
 // Toggle function for navbar click
 const toggleNavClick = () => {
@@ -30,14 +32,17 @@ const navbarClickFunction = () => {
   }
 };
 
-// Close navbarItems when user scrolls bellow it
+// Close navbarItems when user scrolls down
 function handleScroll() {
   const scrollPosition =
     window.pageYOffset || document.documentElement.scrollTop;
 
-  if (scrollPosition >= 350) {
+  if (
+    scrollPosition >= 300 &&
+    navbarItems.classList.contains("navbar-mobile")
+  ) {
     navbarOverlay.classList.add("is-hidden");
-    navbarItems.classList.add("is-hidden");
+    navbarMobile.classList.add("is-hidden");
     navbarClick.classList.remove("is-clicked");
   }
 }
@@ -50,3 +55,33 @@ navbarClick.addEventListener("click", () => {
   toggleNavClick();
   navbarClickFunction();
 });
+
+//Media queries for 700px
+const mediaQueryMin700 = window.matchMedia("(min-width: 700px)");
+
+function runMediaQueryMin700(event) {
+  if (event.matches) {
+    navbarItems.classList.remove("navbar-mobile");
+    navbarItems.classList.remove("is-hidden");
+    navbarItems.classList.add("navbar-desktop");
+    navbarOverlay.classList.add("is-hidden");
+    //Loop -navbar a- elements and give styles
+    navbarHrefs.forEach((navbarHref) => {
+      navbarHref.classList.add("hover-class");
+      console.log(navbarHrefs);
+    });
+  } else {
+    navbarItems.classList.add("navbar-mobile");
+    navbarItems.classList.add("is-hidden");
+    navbarItems.classList.remove("navbar-desktop");
+    navbarClick.classList.remove("is-clicked");
+    //remove
+    navbarHrefs.forEach((navbarHref) => {
+      navbarHref.classList.remove("hover-class");
+      console.log(navbarHrefs);
+    });
+  }
+}
+
+mediaQueryMin700.addListener(runMediaQueryMin700);
+runMediaQueryMin700(mediaQueryMin700);
