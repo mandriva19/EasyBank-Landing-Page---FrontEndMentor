@@ -236,12 +236,12 @@
   .hero-img-top {
     position: absolute;
     z-index: 25;
-    margin-top: -120px;
+    margin-top: -7.5rem;
     width: 61%;
     margin-inline: auto;
     display: block;
-    top: 80px;
-    right: -109px;
+    top: 5rem;
+    right: -6.8125rem;
   }
 
   .hero-bg-img-mobile {
