@@ -448,7 +448,7 @@
   font-size: var(--spacing-15);
 }
 
-@media (min-width: 57.25rem) {
+@media (min-width: 58.125rem) {
   .footer {
     grid-template-columns: 20% 26% auto;
     place-items: center;
