@@ -79,7 +79,7 @@ body {
   padding-right: 6.4%;
 }
 
-.total-container {
+.easybank-landing-page {
   max-width: 90rem;
   margin: 0 auto;
 }
@@ -205,4 +205,22 @@ button:hover {
   .hover-class::after {
     top: 47px;
   }
+}
+
+/* attribution front-end-mentor */
+.attribution {
+  font-size: 0.8125rem;
+  color: var(--grayish-blue-light);
+  background-image: var(--linear-gradient);
+  opacity: 0.8;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--grayish-blue-light);
+  font-size: 0.8125rem;
+  text-decoration: underline;
+  opacity: 0.78;
+  text-align: center;
 }
