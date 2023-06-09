@@ -491,7 +491,7 @@
     transition: ease all 100ms;
   }
   .footer-nav a:hover {
-    opacity: 0.7;
+    color: var(--lime-green);
   }
 
   .footer-copy {
