@@ -189,7 +189,6 @@
   .hero-intro {
     order: 1;
     place-items: first baseline;
-    margin-top: var(--spacing-90);
     margin-left: var(--spacing-25);
   }
 
@@ -224,10 +223,22 @@
   }
 }
 
-@media (min-width: 920px) {
+@media (min-width: 57.5rem) {
   .hero-img-top {
     max-width: 37rem;
     top: -5rem;
+  }
+}
+
+@media (min-width: 64.125rem) {
+  .hero-intro {
+    margin-left: 2.375rem;
+  }
+}
+
+@media (min-width: 77.8125rem) {
+  .hero-intro {
+    margin-left: 2.5625rem;
   }
 }
 
@@ -240,10 +251,6 @@
 @media (min-width: 71.25rem) {
   .hero-intro h1 {
     font-size: var(--spacing-50);
-  }
-
-  .hero-intro p {
-    /* font-size: var(--spacing-20); */
   }
 }
 
@@ -278,10 +285,8 @@
 }
 
 .cards-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   gap: var(--spacing-20);
   /* max-width: var(--fixed-mobile); */
 }
@@ -289,10 +294,6 @@
 @media (min-width: 43.75rem) {
   .cards-section {
     background-color: var(--grayish-blue-light);
-  }
-
-  .cards-wrapper {
-    grid-template-columns: 1fr 1fr;
   }
 
   .cards-intro h2 {
@@ -304,6 +305,15 @@
     text-align: left;
     width: 60%;
   }
+
+  .cards-wrapper {
+    grid-template-columns: 1fr 1fr;
+    place-items: first baseline;
+  }
+
+  .cards-item p {
+    text-align: left;
+  }
 }
 
 @media (min-width: 48.75rem) {
@@ -312,13 +322,29 @@
   }
 }
 
+@media (min-width: 51.25rem) {
+  .cards-item {
+    place-items: first baseline;
+  }
+}
+
 @media (min-width: 62.5rem) {
   .cards-wrapper {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+
+  .cards-item p {
+    text-align: left;
+  }
 }
 
-/* blog section */
+@media (min-width: 75rem) {
+  .cards-item {
+    gap: var(--spacing-30);
+  }
+}
+
+/* blog-sections */
 .blog-section {
   background: var(--gray-very-light);
   padding-top: var(--spacing-90);
@@ -333,33 +359,8 @@
   margin-top: var(--spacing-40);
 }
 
-@media (min-width: 40rem) {
-  .blog-items-wrapper {
-    grid-template-columns: 2fr 2fr;
-    max-width: 41.625rem;
-    margin-inline: auto;
-  }
-
-  .blog-item {
-    max-width: 16.25rem;
-  }
-}
-
-@media (min-width: 73.125rem) {
-  .blog-items-wrapper {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    max-width: none;
-    gap: 2%;
-  }
-}
-
-/* @media (min-width: 47.6875rem) {
-  .blog-items-wrapper {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-} */
-
 .blog-item {
+  display: grid;
   background-color: var(--white);
   max-width: 20.3125rem;
   box-shadow: var(--box-shadow);
@@ -369,7 +370,6 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   width: 100%;
-  max-height: 12.5rem;
 }
 
 .blog-item-text {
@@ -390,8 +390,26 @@
   text-align: left;
 }
 
-.blog-item img {
-  max-width: 100%;
+@media (min-width: 40rem) {
+  .blog-items-wrapper {
+    grid-template-columns: 2fr 2fr;
+    max-width: 41.625rem;
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 73.125rem) {
+  .blog-items-wrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: first baseline;
+    max-width: none;
+    gap: var(--spacing-30);
+    /* margin-inline: 0;  */
+  }
+
+  .blog-section h2 {
+    text-align: left;
+  }
 }
 
 /* footer styles */
@@ -406,11 +424,13 @@
 }
 
 .footer-icons-social {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   gap: var(--spacing-15);
 }
 
 .footer-icons-social img {
+  cursor: pointer;
   width: var(--spacing-25);
 }
 
@@ -426,6 +446,56 @@
 
 .footer-nav p {
   font-size: var(--spacing-15);
+}
+
+@media (min-width: 57.25rem) {
+  .footer {
+    grid-template-columns: 20% 26% auto;
+    place-items: center;
+    gap: var(--spacing-90);
+    /* grid-template-rows: 2fr 2fr 2fr; */
+  }
+
+  .footer-logo {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    place-self: first baseline;
+  }
+
+
+  .footer-icons-social {
+   grid-column-start: 1;
+    grid-row-start: 1;
+/*    place-self: end;*/
+  justify-self: flex-start;
+  }
+
+  .footer-icons-social img {
+    width: var(--spacing-20);
+}
+
+
+  .footer-nav {
+    grid-template-columns: 1fr 1fr;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    text-align: left;
+  }
+
+  .footer-copy {
+    grid-column-start: 4;
+    grid-row-start: 1;
+    place-self: last baseline;
+  }
+
+  .footer-btn {
+    grid-column-start: 4;
+    place-self: baseline;
+      justify-self: baseline;
+    grid-row-start: 1;
+    grid-column-end: 4;
+    justify-self: last baseline;
+  
 }
 
 /* attribution front-end-mentor */
