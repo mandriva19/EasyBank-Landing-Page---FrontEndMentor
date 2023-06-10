@@ -384,6 +384,10 @@
   cursor: pointer;
 }
 
+.blog-item-text h5:hover {
+  text-decoration: underline;
+}
+
 .blog-item-text p {
   text-align: left;
 }
