@@ -213,8 +213,7 @@ button:hover {
   color: var(--grayish-blue-light);
   background-image: var(--linear-gradient);
   opacity: 0.8;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-block: 6px;
   text-align: center;
 }
 .attribution a {
